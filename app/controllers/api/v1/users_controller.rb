@@ -1,4 +1,4 @@
-require 'rails_helper'
+# require 'rails_helper'
 
 class Api::V1::UsersController < ApplicationController
   respond_to :json
