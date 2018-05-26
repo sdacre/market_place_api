@@ -37,6 +37,18 @@ describe Api::V1::SessionsController do
  			it { should respond_with 422 }
     end
   end
+
+   describe "DELETE #destroy" do
+
+    before(:each) do
+      @user = FactoryBot.create :user
+      sign_in @user, store: false
+      delete :destroy, id: @user.auth_token
+    end
+
+    it { should respond_with 204 }
+
+  end
 end
 
 
