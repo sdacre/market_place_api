@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.5'
 #json serializers
 gem 'jsonapi-serializers'
 gem 'devise'
+gem 'rspec-collection_matchers'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
