@@ -41,7 +41,7 @@ describe "POST #create" do
 
     product_1 = FactoryBot.create :product
     product_2 = FactoryBot.create :product
-    order_params = { total: 50, user_id: current_user.id, product_ids: [product_1.id, product_2.id] }
+    order_params = { product_ids: [product_1.id, product_2.id] }
     post :create, params: { user_id: current_user.id, order: order_params }
   end
 
@@ -52,5 +52,5 @@ describe "POST #create" do
 
   it { should respond_with 201 }
 end
-
 end
+
