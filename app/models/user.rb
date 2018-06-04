@@ -4,6 +4,7 @@ class User < ApplicationRecord
 	validates :auth_token, uniqueness: true
 	validates_confirmation_of :password 
   has_many :products, dependent: :destroy
+  has_many :orders, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   def generate_authentication_token!

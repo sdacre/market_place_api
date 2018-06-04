@@ -45,6 +45,8 @@ RSpec.describe User, type: :model do
       end
     end
   end
+
+  it { should have_many(:orders) }
 end
 
 
